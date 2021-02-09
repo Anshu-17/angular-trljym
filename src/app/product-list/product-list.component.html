@@ -1,4 +1,23 @@
 <h2>Products</h2>
+<div style="background-color:Bisque" *ngFor="let productOuter of products">
+	<h3>
+		<a [title]="productOuter.name + ' detail'">
+			{{ productOuter.name }} <br>
+    </a>
+	</h3>
+	<h4>
+		<p *ngIf="productOuter.description">
+			Description : {{productOuter.description}}
+		</p>
+	</h4>
+	<hr />
+	<button (click)="share()">
+    Share Product
+  </button>
+</div>
+
+<app-product-alert [productInner]="productOuter">
+</app-product-alert>
 
 
 <!-- 
