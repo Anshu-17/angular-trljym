@@ -1,7 +1,8 @@
 <h2>Products</h2>
 <div style="background-color:Bisque" *ngFor="let productOuter of products">
 	<h3>
-		<a [title]="productOuter.name + ' detail'">
+		<a [title]="productOuter.name + ' detail'"
+    [routerLink]="['/products', productOuter.id]">>
 			{{ productOuter.name }} <br>
     </a>
 	</h3>
@@ -14,10 +15,11 @@
 	<button (click)="share()">
     Share Product
   </button>
+	<app-product-alert [productInner]="productOuter" (notify)="onNotify()">
+	</app-product-alert>
 </div>
 
-<app-product-alert [productInner]="productOuter">
-</app-product-alert>
+
 
 
 <!-- 
