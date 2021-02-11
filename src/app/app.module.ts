@@ -24,7 +24,7 @@ import { ShippingComponent } from "./shipping/shipping.component";
       { path: "", component: ProductListComponent },
       { path: "products/:productId", component: ProductDetailComponent },
       { path: "cart", component: CartComponent },
-      { path: "shipping", component: ShippingComponent }
+      { path: "shipping", component: ShippingComponent },
     ])
   ],
   declarations: [
