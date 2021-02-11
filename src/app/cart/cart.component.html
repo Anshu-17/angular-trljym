@@ -1,0 +1,10 @@
+<h1> Cart</h1>
+<p>
+<a routeLink = "/shipping">Shipping Prices</a>
+</p>
+<div *ngFor = "let item of items"> <br>
+  <button style = "background-color : Lightgray">
+  <b>{{item. name}}</b> <br>
+ <u> &nbsp;&nbsp;{{item.price | currency}}</u><br>
+  </button>
+</div>
